@@ -1,0 +1,220 @@
+.car-form-section
+{
+    background: #ebebeb;
+    padding: 50px 0px 40px 0px;
+}
+
+.car-form-container input[type="text"]
+{
+    padding: 0px 10px;
+}
+
+.car-input-box input[type = text]:hover, .car-input-box input[type = text]:active, .car-input-box input[type = text]:focus
+{
+    border: 1px solid #054171;
+}
+
+.car-form-section input
+{
+    color: #000;
+}
+
+.car-input-contact-details
+{
+    width: 100%;
+    color: #000000;
+    border: none;
+    outline: none;
+}
+
+.car-form-container *
+{
+    color: #004171;
+    outline: none;
+}
+
+.car-form-submit-button
+{
+    border: none;
+    background: #004171;
+    width: 380px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.car-form-submit-button svg
+{
+    margin-left: 15px;
+    fill: #fff;
+}
+
+.car-form-submit-button:hover, .car-complete-button:hover
+{
+    border: 2px solid #004171;
+    color: #004171;
+    background: #fff;
+    outline: none;
+}
+
+.car-form-submit-button:hover svg
+{
+    fill: #004171;
+}
+.car-submit-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.car-form-container input
+{
+    font-size: 14px;
+    height: 40px;
+}
+
+.car-form-container::placeholder, .car-form-container::-ms-input-placeholder
+{
+    color: #8D8D8D;
+}
+
+.car-form-section-title
+{
+    font-size: 30px;
+    text-align: center;
+    font-family: "Roboto-Light";
+}
+
+.car-form-section-subtitle
+{
+    font-size: 16px;
+    margin: 25px auto 0px auto;
+    width: 470px;
+    text-align: center;
+}
+
+.car-error-block
+{
+    font-size: 12px;
+    color: #FF0000;
+    line-height: 16px;
+    margin-top: 8px;
+    display: none;
+}
+
+.car-input-box
+{
+    width: 380px;
+    position: relative;
+    margin: 30px auto 10px auto;
+}
+
+.car-checkbox-box {
+    display: flex;
+    width: 516px;
+    margin: 0px auto;
+    align-items: center;
+}
+#car-agreement {
+    height: auto;
+    margin: 0px 10px 0px 0px;
+}
+
+.car-checkbox-box label {
+    color: #000;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: 'Roboto-Regular';
+}
+
+.car-error-icon
+{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+}
+
+.car-error-input
+{
+    border: 1px solid #FF0000;
+}
+
+.car-error-input::placeholder, .car-error-input::-ms-input-placeholder
+{
+    color: #FF0000;
+}
+
+.car-add-retailer-email-footer-text {
+    color: #000;
+    width: 470px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: 'Roboto-Regular';
+}
+
+.car-add-retailer-email-footer-text + .car-add-retailer-email-footer-text {
+    width: 615px;
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 16px;
+    font-family: 'Roboto-Italic';
+}
+
+.car-form-retailer-email-input {
+    display: none;
+    text-align: center;
+    margin: 60px 0px;
+}
+
+.car-hidden-text {
+    display: none;
+}
+
+.car-hidden-text, .car-hidden-text button {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Roboto-Italic';
+    color: #000;
+}
+
+.car-hidden-text button {
+    border: none;
+    text-decoration: underline;
+    padding: 0px;
+    margin: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .car-input-box
+    {
+        width: 302px;
+        max-width: 302px;
+        min-width: 302px;
+    }
+
+    .car-form-submit-button
+    {
+        width: 302px;
+        height: 40px;
+    }
+
+    .car-form-section-subtitle {
+        width: 302px;
+    }
+
+    .car-add-retailer-email-footer-text {
+        width: 302px;
+    }
+
+    .car-add-retailer-email-footer-text + .car-add-retailer-email-footer-text {
+        width: 302px;
+    }
+}

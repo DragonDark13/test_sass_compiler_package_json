@@ -1,0 +1,31 @@
+@import "variables";
+
+@mixin loading {
+    position: relative;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+    }
+
+    &::before {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba($white, .7);
+        z-index: 10;
+        border-radius: 10px;
+    }
+
+    &::after {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% -50%);
+        z-index: 10;
+        width: 100px;
+        height: 100px;
+        background: url("#{$images-link}/spinner.svg") no-repeat center center;
+    }
+}

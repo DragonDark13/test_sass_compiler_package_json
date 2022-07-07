@@ -1,0 +1,54 @@
+header .page-title {
+	display: none;
+}
+
+.car-complete-section {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.car-complete-title {
+	font-size: 40px;
+	line-height: 55px;
+	color: #004171;
+	font-family: 'Roboto-Light';
+	max-width: 764px;
+	text-align: center;
+}
+
+.car-complete-title + .car-complete-title {
+	margin-top: 20px;
+}
+
+.car-complete-text {
+	font-size: 16px;
+	line-height: 23px;
+	color: #8D8D8D;
+	font-family: 'Roboto-Regular';
+	max-width: 721px;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.car-complete-text a {
+	font-size: 16px;
+	line-height: 23px;
+	color: #8D8D8D;
+	font-family: 'Roboto-Regular';
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+	.car-complete-image img {
+		height: 100px
+	}
+	.car-complete-image {
+		margin-top: 60px;
+	}
+	.car-complete-title {
+		font-size: 30px;
+		line-height: 35px;
+	}
+}

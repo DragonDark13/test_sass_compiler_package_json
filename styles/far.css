@@ -1,0 +1,521 @@
+/*
+ * Mixin printing a linear-gradient
+ * as well as a plain color fallback
+ * and the `-webkit-` prefixed declaration
+ * @access public
+ * @param {Keyword | Angle} $direction - Linear gradient direction
+ * @param {Arglist} $color-stops - List of color-stops composing the gradient
+ *
+ * @see https://www.sitepoint.com/building-linear-gradient-mixin-sass/
+ */
+/********************************************FOR MOBILE DEVICE********************************************/
+.far-page-title {
+  font-size: 40px;
+  font-family: "Roboto-Light", sans-serif;
+  margin: 0px auto 25px auto;
+  text-align: center;
+  color: #13416C; }
+
+.far-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; }
+  .far-search-container .far-popup {
+    margin-right: 105px; }
+  .far-search-container-text {
+    font-size: 16px;
+    color: #000000;
+    font-family: "Roboto-Light", sans-serif;
+    font-weight: bold; }
+
+.far-search-input {
+  position: relative;
+  z-index: 2;
+  width: 323px;
+  border: none;
+  border-radius: 25px;
+  background: #ebebeb;
+  font-size: 18px;
+  font-family: "Roboto-Regular", sans-serif;
+  padding: 0px 50px 0px 20px; }
+  .far-search-input:focus {
+    border: 2px solid #3A54E3;
+    background: #ffffff;
+    outline: none; }
+  .far-search-input-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    height: 50px; }
+  .far-search-input.error {
+    border: 2px solid #e80000; }
+
+.far-search-button {
+  position: absolute;
+  z-index: 2;
+  right: 4px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  background: #FCA500;
+  border-radius: 25px;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 14px; }
+  .far-search-button:focus {
+    outline: none; }
+
+.far-search-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url("../images/search.svg");
+  mask-image: url("../images/search.svg");
+  background-color: #ffffff; }
+
+.far-search-results-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 21px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 323px;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ebebeb;
+  border-radius: 5px;
+  border-top: none;
+  background-color: transparent;
+  padding-top: 35px;
+  font-size: 16px; }
+
+.far-search-results-item {
+  padding: 5px 0  5px 10px;
+  cursor: pointer;
+  background-color: #ffffff; }
+  .far-search-results-item:hover {
+    background-color: #ebebeb; }
+
+.far-popup {
+  box-shadow: 0px 0px 6px #00000080;
+  background-color: #ffffff;
+  color: #4E4E4E;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  font-size: 14px;
+  width: 153px;
+  display: none; }
+  .far-popup * {
+    color: #4E4E4E;
+    stroke: #4E4E4E; }
+  .far-popup-text {
+    display: flex; }
+    .far-popup-text + .far-popup-text {
+      margin-top: 20px; }
+  .far-popup-icon {
+    margin-right: 10px; }
+  .far-popup.active {
+    display: block; }
+
+.far-product-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: max-content;
+  margin: 20px auto; }
+  .far-product-options label {
+    margin: 0px 0px 0px 5px;
+    font-size: 16px;
+    color: #000000;
+    font-family: "Roboto-Light", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center; }
+
+.far-product-option-group > input[type="radio"] {
+  display: none; }
+  .far-product-option-group > input[type="radio"] + *::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #555555; }
+  .far-product-option-group > input[type="radio"]:checked + *::before {
+    background: radial-gradient(#555555 0%, #555555 40%, transparent 50%, transparent);
+    border-color: #555555; }
+
+.far-product-icon-outdoor {
+  -webkit-mask-image: url("../images/outdoor.svg");
+  mask-image: url("../images/outdoor.svg"); }
+
+.far-product-icon-interior {
+  -webkit-mask-image: url("../images/interior.svg");
+  mask-image: url("../images/interior.svg"); }
+
+.far-map {
+  height: 377px;
+  width: 100%; }
+  .far-map-retailer-name {
+    color: #000000;
+    font-size: 16px; }
+  .far-map-retailer-address a {
+    color: #1D426A;
+    font-size: 14px;
+    text-decoration: underline; }
+
+.far-retailers {
+  width: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0px 10px; }
+  .far-retailers-title {
+    font-family: "Roboto-Light", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 25px;
+    display: none; }
+
+.far-premium-retailers, .far-non-premium-retailers {
+  width: 100%; }
+
+.far-no-results {
+  margin: 40px auto;
+  text-align: center;
+  font-size: 1.2em;
+  color: #000000;
+  display: none; }
+
+.far-premium-retailer {
+  border: 1px solid #FFC525;
+  background-color: #ffffff;
+  margin: 15px 0px;
+  padding: 15px;
+  height: auto;
+  border-radius: 5px;
+  position: relative; }
+  .far-premium-retailer-star {
+    position: absolute;
+    top: 6px;
+    right: 8px; }
+
+.far-non-premium-retailer {
+  border: 1px solid #C9C9C9;
+  background-color: #ffffff;
+  margin: 15px 0px;
+  padding: 15px;
+  height: auto;
+  border-radius: 5px; }
+
+.far-retailer-container {
+  display: flex;
+  flex-direction: column-reverse; }
+
+.far-retailer-details {
+  display: flex;
+  margin-bottom: 10px; }
+
+.far-retailer-name {
+  display: none; }
+  .far-retailer-name-mobile {
+    text-align: center; }
+
+.far-retailer-name, .far-retailer-name-mobile {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 15px; }
+
+.far-retailer-contact-details {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.far-retailer-logo {
+  width: 116px;
+  text-align: center;
+  margin: 0px auto 15px auto; }
+  .far-retailer-logo img {
+    max-height: 94px;
+    max-width: 116px; }
+
+.far-retailer-address {
+  display: flex;
+  font-size: 14px;
+  color: #004171;
+  margin-bottom: 10px; }
+  .far-retailer-address a {
+    color: #1D426A; }
+  .far-retailer-address-icon {
+    -webkit-mask-image: url("../images/address.svg");
+    mask-image: url("../images/address.svg"); }
+
+.far-retailer-phone-icon {
+  -webkit-mask-image: url("../images/phone.svg");
+  mask-image: url("../images/phone.svg"); }
+
+.far-retailer-phone-area {
+  display: flex;
+  margin-bottom: 10px;
+  color: #1D426A;
+  font-size: 14px; }
+  .far-retailer-phone-area button {
+    border: none;
+    background: none;
+    outline: none; }
+    .far-retailer-phone-area button:hover {
+      text-decoration: underline; }
+
+.far-retailer-page {
+  color: #1D426A;
+  text-decoration: none;
+  font-size: 14px; }
+  .far-retailer-page-icon {
+    width: 17px;
+    height: 17px;
+    -webkit-mask-image: url("../images/page_icon.svg");
+    mask-image: url("../images/page_icon.svg");
+    -webkit-mask-size: 17px 17px;
+    mask-size: 17px 17px; }
+  .far-retailer-page-area {
+    display: flex; }
+
+.far-retailer-address-icon, .far-retailer-phone-icon, .far-retailer-page-icon {
+  margin-right: 10px; }
+
+.far-retailer-store-area, .far-retailer-products-area {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  color: #1D426A;
+  align-items: center; }
+
+.far-retailer-products-area +
+.far-retailer-store-area::before {
+  content: "|";
+  color: #C9C9C9;
+  margin: 0px 8px; }
+
+.far-product-icon, .far-store-icon {
+  width: 20px;
+  height: 20px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  -webkit-mask-size: 20px 20px;
+  mask-size: 20px 20px;
+  background-color: #1D426A; }
+
+.far-store-icon {
+  -webkit-mask-image: url("../images/store.svg");
+  mask-image: url("../images/store.svg");
+  color: #1D426A; }
+
+.far-delivery-icon {
+  -webkit-mask-image: url("../images/delivery.svg");
+  mask-image: url("../images/delivery.svg"); }
+
+.far-call-to-retailer {
+  text-decoration: none;
+  color: #1D426A; }
+
+.far-question-mark {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  margin: 0px 4px; }
+  .far-question-mark .far-popup {
+    width: 200px; }
+
+.far-retailer-products-area .far-question-mark {
+  justify-content: flex-start; }
+
+.far-product-icon + .far-product-icon,
+.far-store-icon + .far-store-icon {
+  margin-left: 8px; }
+
+.far-3d-configurator {
+  text-align: center;
+  width: 100%;
+  display: flex; }
+
+.far-contact-a-retailer-button {
+  color: #ffffff;
+  background: #004171;
+  border: 1px solid #004171;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  padding: 0px 10px; }
+  .far-contact-a-retailer-button:hover, .far-contact-a-retailer-button:focus, .far-contact-a-retailer-button:active {
+    background: #ffffff;
+    color: #004171;
+    text-decoration: none;
+    outline: none; }
+  .far-contact-a-retailer-button:hover *,
+  .far-contact-a-retailer-button:focus *,
+  .far-contact-a-retailer-button:active * {
+    color: #004171;
+    background-color: #004171; }
+  .far-contact-a-retailer-button-icon {
+    mask-image: url("../images/email.svg");
+    -webkit-mask-image: url("../images/email.svg");
+    mask-image: url("../images/email.svg");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+    -webkit-mask-size: 20px 20px;
+    mask-size: 20px 20px;
+    background-color: #ffffff;
+    margin-left: 10px; }
+    .far-contact-a-retailer-button-icon path {
+      fill: #ffffff; }
+
+body.loading {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative; }
+  body.loading::before, body.loading::after {
+    position: absolute;
+    content: ''; }
+  body.loading::before {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    border-radius: 10px; }
+  body.loading::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    background: url("../images/spinner.svg") no-repeat center center; }
+
+body.modal-open {
+  overflow: auto; }
+
+.modal {
+  text-align: center;
+  padding: 0 !important; }
+  .modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; }
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle; }
+  .modal-line {
+    margin: 15px 0;
+    border-bottom: 1px solid #ebebeb; }
+
+.pac-logo:after {
+  display: none; }
+
+.pac-container {
+  box-shadow: none;
+  background: #ebebeb;
+  width: 324px !important;
+  border-top: 0px; }
+
+.found-near {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #555555; }
+
+.sorry {
+  font-weight: bold;
+  font-size: 13px;
+  color: #555555; }
+
+.feather-info {
+  background-image: url("../images/info.svg");
+  background-color: inherit;
+  width: 24px;
+  height: 24px; }
+
+.fa-question-circle {
+  color: #C9C9C9; }
+
+#prefooter {
+  display: none; }
+
+/*Google map changes*/
+.gm-style .gm-style-iw-t::after {
+  display: none; }
+
+.gm-style .gm-style-iw-c {
+  border-radius: 0px; }
+
+/********************************************FOR DESKTOPS********************************************/
+@media only screen and (min-width: 769px) {
+  .far-retailer-name {
+    display: block; }
+    .far-retailer-name-mobile {
+      display: none; }
+  .far-retailer-container {
+    flex-direction: row; }
+  .far-retailer-logo {
+    margin: auto 0px auto auto; }
+  .far-retailer-information {
+    margin-right: 10px; }
+  .far-product-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 25px 0px;
+    width: auto; }
+  .far-product-option-group:not(:first-child) {
+    margin-left: 39px; }
+  .far-map {
+    height: 500px; }
+  .far-premium-retailers {
+    margin-left: 12px; }
+  .far-retailers {
+    flex-direction: row;
+    max-width: 854px;
+    margin: auto; }
+    .far-retailers-title {
+      display: block; }
+  .far-non-premium-retailer, .far-premium-retailer {
+    padding: 18px 22px; }
+  .far-non-premium-retailers, .far-premium-retailers {
+    width: 50%; }
+  .far-search-container {
+    flex-direction: row; } }
+
+@media only screen and (min-width: 1024px) {
+  .far-search-container .far-popup {
+    margin-right: 0px; }
+  .far-retailer-products-area .far-question-mark {
+    justify-content: center; } }

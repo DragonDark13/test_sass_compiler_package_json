@@ -1,0 +1,56 @@
+@import "./../node_modules/sass-autoprefixer/scss/prefixes";
+@import "variables";
+@import "far";
+@import "modal";
+@import "mixins";
+
+.pac-logo:after {
+  display: none;
+}
+
+.pac-container {
+  box-shadow: none;
+  background: $light-gray;
+  width: 324px !important;
+  border-top: 0px;
+}
+
+.found-near {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: $gray;
+}
+
+.sorry {
+  font-weight: bold;
+  font-size: 13px;
+  color: $gray;
+}
+
+.feather-info {
+  background-image: url("#{$images-link}/info.svg");
+  background-color: inherit;
+  width: 24px;
+  height: 24px;
+}
+
+.fa-question-circle {
+  color: $simple-gray;
+}
+
+#prefooter {
+  display: none;
+}
+
+
+/*Google map changes*/
+.gm-style .gm-style-iw-t::after {
+  display: none;
+}
+
+.gm-style .gm-style-iw-c {
+  border-radius: 0px;
+}
+
+@import "responsive";

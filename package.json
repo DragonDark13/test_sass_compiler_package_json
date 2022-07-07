@@ -1,0 +1,19 @@
+{
+  "name": "test_sass_compiler_package_json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "bin/build-css.bat",
+    "watch-css": "bin/watch-css.bat"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.18",
+    "sass-autoprefixer": "^1.0.1"
+  }
+}

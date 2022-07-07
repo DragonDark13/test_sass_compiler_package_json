@@ -1,0 +1,84 @@
+/********************************************FOR DESKTOPS********************************************/
+@media only screen and (min-width: 769px) {
+  .far {
+    &-retailer {
+      &-name {
+        display: block;
+
+        &-mobile {
+          display: none;
+        }
+      }
+
+      &-container {
+        flex-direction: row;
+      }
+
+      &-logo {
+        margin: auto 0px auto auto;
+      }
+      
+      &-information {
+        margin-right: 10px;
+      }
+    }
+
+    &-product {
+      &-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 25px 0px;
+        width: auto;
+      }
+
+      &-option-group:not(:first-child) {
+        margin-left: 39px;
+      }
+    }
+
+    &-map {
+      height: 500px;
+    }
+
+    &-premium-retailers {
+      margin-left: 12px;
+    }
+
+    &-retailers {
+      flex-direction: row;
+      max-width: 854px;
+      margin: auto;
+
+      &-title {
+        display: block;
+      }
+    }
+
+    &-non-premium-retailer,
+    &-premium-retailer {
+      padding: 18px 22px;
+    }
+
+    &-non-premium-retailers,
+    &-premium-retailers {
+      width: 50%;
+    }
+
+    &-search {
+      &-container {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .far-search-container .far-popup {
+    margin-right: 0px;
+  }
+
+  .far-retailer-products-area .far-question-mark {
+    justify-content: center;
+  }
+}
